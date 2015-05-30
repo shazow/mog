@@ -1,6 +1,9 @@
 ---
 ---
 
+{% assign release = site.github.releases[0] %}
+{% assign relname = release.tag_name %}
+
 <!doctype html>
 <html>
 	<head>
@@ -15,9 +18,6 @@
 		<![endif]-->
 	</head>
 	<body>
-		<!--
-		{{ site.github.releases | jsonify }}
-		-->
 		<div class="wrapper">
 			<header>
 				<h1>mog</h1>
@@ -25,17 +25,17 @@
 
 				<h2>Download Executables</h2>
 
-	<p>Version <a href="https://github.com/mjibson/mog/releases/tag/{{ site.version.id }}">{{ site.version.id }}</a> ({{ site.time | date_to_string }})</p>
+				<p>Version <a href="https://github.com/mjibson/mog/releases/tag/{{ relname }}">{{ relname }}</a> ({{ release.published_at | date_to_string }})</p>
 
 				<ul>
-					<li><a href="https://github.com/mjibson/mog/releases/download/{{site.version.id}}/mog-linux-amd64"><strong>Linux</strong> 64-bit</a></li>
-					<li><a href="https://github.com/mjibson/mog/releases/download/{{site.version.id}}/mog-windows-amd64.exe"><strong>Windows</strong> 64-bit</a></li>
-					<li><a href="https://github.com/mjibson/mog/releases/download/{{site.version.id}}/mog.zip"><strong>Mac</strong></a></li>
+					<li><a href="https://github.com/mjibson/mog/releases/download/{{relname}}/mog-linux-amd64"><strong>Linux</strong> 64-bit</a></li>
+					<li><a href="https://github.com/mjibson/mog/releases/download/{{relname}}/mog-windows-amd64.exe"><strong>Windows</strong> 64-bit</a></li>
+					<li><a href="https://github.com/mjibson/mog/releases/download/{{relname}}/mog.zip"><strong>Mac</strong></a></li>
 				</ul>
 
 				<p>Also:
 				
-				<p><a href="https://github.com/mjibson/mog/releases/download/{{site.version.id}}/mog-windows-386.exe">Windows 32-bit</a>
+				<p><a href="https://github.com/mjibson/mog/releases/download/{{relname}}/mog-windows-386.exe">Windows 32-bit</a>
 
 				<p class="view"><a href="https://github.com/mjibson/mog/">View the Project on GitHub</a></p>
 			</header>
