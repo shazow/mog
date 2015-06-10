@@ -1,7 +1,8 @@
 ---
 ---
 
-{% assign release = site.github.releases[0] %}
+{% assign releases = site.github.releases | where:"draft",false %}
+{% assign release = releases[0] %}
 {% assign relname = release.tag_name %}
 
 <!doctype html>
@@ -58,6 +59,7 @@
 <p>mog can play from various sources:</p>
 
 <ul>
+	<li>Google Music</li>
 	<li>Your computer</li>
 	<li>Soundcloud</li>
 	<li>Dropbox</li>
