@@ -33,6 +33,7 @@ import (
 	_ "github.com/mjibson/mog/protocol/gmusic"
 	"github.com/mjibson/mog/protocol/soundcloud"
 	_ "github.com/mjibson/mog/protocol/stream"
+	_ "github.com/mjibson/mog/protocol/youtube"
 )
 
 var (
